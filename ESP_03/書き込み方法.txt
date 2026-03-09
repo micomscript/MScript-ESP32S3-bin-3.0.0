@@ -1,0 +1,19 @@
+ESP32版MicomScriptの書き込み方法
+
+●ESP32-S3-DevKitC-1 N8 をUSBでPCと接続します。
+
+●デバイスマネージャを開き、
+　ESP32が接続されたCOMポートを確認します。
+
+●バッチファイル WriteMScript.bat を開き、
+　COMポートを上で確認したポート名へ変更します。
+　変更後、上書き保存します。
+
+	esptool.exe --chip esp32s3 --port COM6 --baud 921600 ....
+                                      ~~~~
+
+●バッチファイルを実行します。
+　WriteMScript.bat をダブルクリックすれば、実行されます。
+　esptool により書き込まれます。
+
+以上
