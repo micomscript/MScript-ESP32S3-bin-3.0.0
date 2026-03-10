@@ -26,8 +26,7 @@ MicomScript は、C 言語に似た構文を持つマイコン制御用スクリ
 - [bin](bin/)		… バイナリ
 - [doc](doc/)		… 詳細ドキュメント
 - [MScript](MScript/)		… MScript本体
-- [UpdateContents2025](UpdateContents2025/)	… 2025年度更新内容
-- LICENSE(LICENSE)		… MITライセンス
+- LICENSE		… MITライセンス
 - README.md		… MicomScript紹介
 
 
@@ -54,4 +53,5 @@ MITライセンス(LICENSE.txtに記載) This software is released under the MIT
 末吉祢音/座光寺孝彦/中村陸哉/麥田迅/相川政和
 
 ### 2025年度開発メンバー
+
 田島伊知朗/児玉健登/宮﨑亮輔/相川政和
