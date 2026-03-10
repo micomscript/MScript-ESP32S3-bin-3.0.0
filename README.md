@@ -18,7 +18,7 @@ MicomScript は、C 言語に似た構文を持つマイコン制御用スクリ
 4. 必要ライブラリをインストール  
 5. コンパイルして書き込み
 
-**詳細なセットアップ手順はこちら↓**
+**詳細なセットアップ手順はこちら→**
 -[doc/setup_esp32/setup_esp32.md](doc/setup_esp32/setup_esp32.md)
 
 
@@ -55,3 +55,4 @@ MITライセンス(LICENSE.txtに記載) This software is released under the MIT
 ### 2025年度開発メンバー
 
 田島伊知朗/児玉健登/宮﨑亮輔/相川政和
+
