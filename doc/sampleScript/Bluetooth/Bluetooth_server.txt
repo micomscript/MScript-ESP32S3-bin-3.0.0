@@ -1,0 +1,15 @@
+Bluetooth.begin("server")
+var led = Output(2)
+var msg
+while(1){
+	if(Bluetooth.isConnected()){
+		msg = Bluetooth.read()
+		if (msg == "on")
+			led.high()
+		if (msg == "off")
+			led.low()
+		if (msg == "toggle")
+			led.toggle()
+	}
+	delay(50)
+}

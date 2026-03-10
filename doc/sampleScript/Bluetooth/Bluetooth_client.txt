@@ -1,0 +1,9 @@
+Bluetooth.begin("ESP32", true)
+Bluetooth.connect("24:0A:C4:C1:06:D6")
+var i
+for(i = 0;i < 10; i++) {
+	Bluetooth.write("on")
+	delay(1000)
+	Bluetooth.write("off")
+	delay(1000)
+}
