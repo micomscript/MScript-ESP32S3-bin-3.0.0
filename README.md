@@ -19,16 +19,16 @@ MicomScript は、C 言語に似た構文を持つマイコン制御用スクリ
 5. コンパイルして書き込み
 
 **詳細なセットアップ手順はこちら↓**
-`doc/setup_32/setup_esp32.md`
+[setup_esp32.md](doc/setup_32/setup_esp32.md)
 
 
 ## Directory Structure
-- `bin/`		… バイナリ
-- `doc/`		… 詳細ドキュメント
-- `MScript/`		… MScript本体
-- `UpdateContents2025`	… 2025年度更新内容
-- `LICENSE`		… MITライセンス
-- `README.md`		… MicomScript紹介
+- [bin](bin/)		… バイナリ
+- [doc](doc/)		… 詳細ドキュメント
+- [MScript](MScript/)	… MScript本体
+- [UpdateContents2025](UpdateContents2025/)	… 2025年度更新内容
+- LICENSE		… MITライセンス
+- README.md		… MicomScript紹介
 
 
 ## ライセンス
