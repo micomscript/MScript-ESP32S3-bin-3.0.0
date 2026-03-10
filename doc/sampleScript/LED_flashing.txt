@@ -1,0 +1,8 @@
+var led = Output(2)
+
+function blink(){
+    led.toggle()
+}
+
+var timer = Timer()
+timer.setTimer("blink", 500)

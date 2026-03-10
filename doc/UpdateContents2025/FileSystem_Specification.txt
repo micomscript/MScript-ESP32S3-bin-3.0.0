@@ -1,0 +1,59 @@
+FileSystem 変更履歴と仕様
+
+1.1 SPIFFS → LittleFS への移行
+・全コード内の SPIFFS を LittleFS に置換
+・#include <SPIFFS> → #include <LittleFS>
+・ファイル操作はすべて LittleFS ベースで動作
+
+1.2 パス処理の改善
+・ディレクトリが存在しない場合、自動生成する関数を追加
+・パスを "/" で分割するユーティリティ関数を追加
+
+1.3 cd / mkdir / rmdir / rm / pwd の実装
+cd
+・parser 側のパス解析処理を削除し、相対パス対応
+mkdir
+・指定パスのディレクトリを作成
+rmdir
+・指定ディレクトリを削除
+rm
+・openfile() を誤って呼び出していたバグを修正
+pwd
+・現在の作業ディレクトリを返す
+
+コマンド仕様変更
+
+2.1 save
+save "path/filename"
+・LittleFS に保存
+・ディレクトリが無ければ自動生成
+
+2.2 files → ls に名称変更
+ls
+ls <directory>
+ls <file>
+
+変更箇所
+・parser.cpp（150行付近）
+・token.h（120行付近）
+・tokenizer.cpp（125行付近、170行付近）
+
+2.3 /init の扱い
+・/init が存在する場合のみ起動時に実行
+・存在しない場合は何もしない
+・tokenizer.cpp 255行付近の不要な printf を削除
+
+load コマンドのバグ修正
+
+問題点
+・load 実行後に _line_number が正しく復元されない
+・tokenizer の closeScript が不完全
+
+まとめ
+
+・SPIFFS → LittleFS 移行
+・パス処理の改善と自動ディレクトリ生成
+・cd / mkdir / rm / pwd などのファイル操作コマンド
+・ls コマンドへの統一
+・/init の起動仕様
+・load のバグ修正

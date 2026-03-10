@@ -1,0 +1,57 @@
+var ENA = PWM(27)  // right motor
+var IN1 = Output(25)
+var IN2 = Output(26)
+var ENB = PWM(14)  // left motor
+var IN3 = Output(32)
+var IN4 = Output(33)
+
+var carstate = 0
+
+function forward(){
+    IN1.low()
+    IN2.high()
+    ENA.start(50,0.8)   // 80% duty cycle
+    IN3.high()
+    IN4.low()
+    ENB.start(50,0.8)   // 80% duty cycle
+}
+function backward(){
+    IN1.high()
+    IN2.low()
+    ENA.start(50,0.8)
+    IN3.low()
+    IN4.high()
+    ENB.start(50,0.8)
+}
+function spinright(){
+    IN1.low()
+    IN2.high()
+    ENA.start(50,0.8)
+    IN3.low()
+    IN4.high()
+    ENB.start(50,0.8)
+}
+function spinleft(){
+    IN1.high()
+    IN2.low()
+    ENA.start(50,0.8)
+    IN3.high()
+    IN4.low()
+    ENB.start(50,0.8)
+}
+function ternleft(){
+    IN1.low()
+    IN2.high()
+    ENA.start(50,1)
+    IN3.high()
+    IN4.low()
+    ENB.start(50,0.3)
+}
+function ternright(){
+    IN1.low()
+    IN2.high()
+    ENA.start(50,0.3)
+    IN3.high()
+    IN4.low()
+    ENB.start(50,1)
+}
