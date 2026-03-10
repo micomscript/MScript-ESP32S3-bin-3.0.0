@@ -18,8 +18,8 @@ MicomScript は、C 言語に似た構文を持つマイコン制御用スクリ
 4. 必要ライブラリをインストール  
 5. コンパイルして書き込み
 
-**詳細なセットアップ手順はこちら↓**
-[setup_esp32.md](doc/setup_32/setup_esp32.md)
+**詳細なセットアップ手順はこちら→**
+[setup_esp32.md](doc/setup_32/)
 
 
 ## Directory Structure
